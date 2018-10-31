@@ -1,27 +1,68 @@
 <!DOCTYPE html>
 <html>
 <style>
-
 body {
+  background-color: white;
+  }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
   background-color: lightgrey;
-  display: flex;
-  justify-content: center;
-  }
+  padding: 10px;
+}
+.grid-item {
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+}
+.item1 {
+  grid-column: 1 / span 4;
+  grid-row: 1 / 2;
+  height: 80px;
+}
+.item2 {
+  grid-column: 1 / span 4;
+  grid-row: 3 / 6;
+  background-color: white;
+}
+.item3 {
+  grid-column: 1 / span 4;
+  grid-row: 7 / 8;
+}
   
+div {
+  text-align: center;
+}
+ 
 h1 {
+  font-size: 30px;
+}
 
-  }
+h2 {
+  font-size: 20px;
+}
+ 
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
   
-  h2 {
-  
-  }
-
 </style>
 
 <main>
 <title>Matthias B.</title>
-  <h1>Matthias B.</h1>
-  <h2>Coding in the Alps</h2>
-  <img src="https://amp.businessinsider.com/images/525e97dfeab8ead530928bff-1334-1000.jpg" alt="That's not how IT works">
+<div class="grid-container">
+  <div class="grid-item item1">
+   <h1>Matthias B.</h1>
+   <h2>Codig in the Alps</h2>
+  </div>
+  <div class="grid-item item2"><img src="https://amp.businessinsider.com/images/525e97dfeab8ead530928bff-1334-1000.jpg" alt="That's not how IT works"><figcaption>How does IT work?</figcaption></div>
+  <div class="grid-item item3">3</div>  
+</div>
+
 </main>
 </html>
